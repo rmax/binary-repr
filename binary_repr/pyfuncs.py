@@ -78,7 +78,7 @@ def binary_repr(num, width=None):
     elif num == 0:
         return b'0'*(width or 1)
     ostr = hex(num)
-    out = b''.join([_lookup[ch] for ch in ostr[2:]])
+    out = b''.join(_lookup[chr] for chr in ostr[2:])
     out = out.lstrip(b'0')
     if width is not None:
         out = out.zfill(width)
