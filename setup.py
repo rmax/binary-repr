@@ -7,8 +7,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-from Cython.Build import cythonize
-
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -37,7 +35,6 @@ setup(
     ],
     package_dir={'binary_repr':
                  'binary_repr'},
-    ext_modules=cythonize('binary_repr/*.pyx'),
     include_package_data=True,
     install_requires=requirements,
     license="MIT",

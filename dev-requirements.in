@@ -15,4 +15,3 @@ cryptography
 PyYAML
 pytest
 pip-tools
-cython
