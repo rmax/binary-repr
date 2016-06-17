@@ -5,13 +5,13 @@
 #    pip-compile dev-requirements.in > dev-requirements.txt
 #
 bumpversion
-wheel
-watchdog
 flake8
-tox
 coverage
-Sphinx
-cryptography
-PyYAML
 pytest
-pip-tools
+# Only required to run tests under tox.
+#tox
+# Only required for updating requirements before releases.
+#pip-tools
+# Only required for travis_pypi_setup.py
+#cryptography
+#PyYAML
