@@ -1,29 +1,29 @@
 """Functions to convert integers to binary strings and viceversa."""
 
 _lookup = {
-    b'0': b'0000',
-    b'1': b'0001',
-    b'2': b'0010',
-    b'3': b'0011',
-    b'4': b'0100',
-    b'5': b'0101',
-    b'6': b'0110',
-    b'7': b'0111',
-    b'8': b'1000',
-    b'9': b'1001',
-    b'a': b'1010',
-    b'b': b'1011',
-    b'c': b'1100',
-    b'd': b'1101',
-    b'e': b'1110',
-    b'f': b'1111',
-    b'A': b'1010',
-    b'B': b'1011',
-    b'C': b'1100',
-    b'D': b'1101',
-    b'E': b'1110',
-    b'F': b'1111',
-    b'L': b'',
+    '0': b'0000',
+    '1': b'0001',
+    '2': b'0010',
+    '3': b'0011',
+    '4': b'0100',
+    '5': b'0101',
+    '6': b'0110',
+    '7': b'0111',
+    '8': b'1000',
+    '9': b'1001',
+    'a': b'1010',
+    'b': b'1011',
+    'c': b'1100',
+    'd': b'1101',
+    'e': b'1110',
+    'f': b'1111',
+    'A': b'1010',
+    'B': b'1011',
+    'C': b'1100',
+    'D': b'1101',
+    'E': b'1110',
+    'F': b'1111',
+    'L': b'',
 }
 
 
@@ -70,7 +70,7 @@ def binary_repr(num, width=None):
     sign = b''
     if num < 0:
         if width is None:
-            sign = '-'
+            sign = b'-'
             num = -num
         else:
             # replace num with its 2-complement
@@ -111,9 +111,9 @@ def integer_repr(bin_str, fixed_width=False):
     """
     # TODO: In C use strtol strtoll
     if fixed_width:
-        assert bin_str[0] != '-', "invalid fixed-width binary representation"
+        assert bin_str[:1] != b'-', "invalid fixed-width binary representation"
         num = int(bin_str, 2)
-        if bin_str[0] == '1':
+        if bin_str[:1] == b'1':
             num -= 2**len(bin_str)
         return num
     else:
