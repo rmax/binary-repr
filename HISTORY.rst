@@ -6,3 +6,4 @@ History
 ------------------
 
 * First release on PyPI.
+* Pure python versions of ``binary_repr`` and ``integer_repr``.
