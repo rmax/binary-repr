@@ -15,6 +15,8 @@ Binary Representation
 
 Converts integers to binary representation.
 
+Yes, a Cython spinoff of ``numpy.binary_repr`` function.
+
 * Free software: MIT license
 * Documentation: https://binary-repr.readthedocs.org.
 
