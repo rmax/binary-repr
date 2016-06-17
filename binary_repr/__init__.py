@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .funcs import binary_repr, integer_repr
+from .pyfuncs import binary_repr, integer_repr
 
 __all__ = ['binary_repr', 'integer_repr']
 
