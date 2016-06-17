@@ -47,7 +47,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 binary-repr tests
+	flake8 binary_repr tests
 
 test:
 
@@ -59,7 +59,7 @@ test-all:
 
 coverage:
 
-	coverage run --source binary-repr py.test
+	coverage run --source binary_repr py.test
 
 	coverage report -m
 	coverage html
@@ -69,9 +69,9 @@ compile-dev-reqs:
 	pip-compile dev-requirements.in > dev-requirements.txt
 
 docs:
-	rm -f docs/binary-repr.rst
+	rm -f docs/binary_repr.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ binary-repr
+	sphinx-apidoc -o docs/ binary_repr
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

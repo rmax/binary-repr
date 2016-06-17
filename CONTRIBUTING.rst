@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up `binary-repr` for local development.
 
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
 
-    $ flake8 binary-repr tests
+    $ flake8 binary_repr tests
     $ python setup.py test or py.test
     $ tox
 
@@ -110,5 +110,5 @@ Tips
 
 To run a subset of tests::
 
-$ py.test tests.test_binary-repr
+$ py.test tests.test_binary_repr
 

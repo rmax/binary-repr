@@ -4,4 +4,4 @@ Usage
 
 To use Binary Representation in a project::
 
-    import binary-repr
+    import binary_repr

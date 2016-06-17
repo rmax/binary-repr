@@ -24,6 +24,13 @@ Features
 --------
 
 * TODO
+  * this provides binary_repr function INT/LONG -> BYTES 1/0's
+    * handle fixed width
+    * signed/unsigned
+  * the inverse binary repr is integer_repr BYTES -> LONG
+    * unsigned / signed
+    * always long
+
 
 Credits
 ---------
