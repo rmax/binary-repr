@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# binary_repr documentation build configuration file, created by
+# binary-repr documentation build configuration file, created by
 # sphinx-quickstart on Tue Jul  9 22:26:36 2013.
 #
 # This file is execfile()d with the current directory set to its
@@ -257,7 +257,7 @@ texinfo_documents = [
     ('index', 'binary_repr',
      u'Binary Representation Documentation',
      u'Rolando Espinoza',
-     'binary_repr',
+     'binary-repr',
      'One line description of project.',
      'Miscellaneous'),
 ]

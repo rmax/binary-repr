@@ -1,40 +1,34 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from setuptools import setup
+from pkgutil import walk_packages
 
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+def find_packages(path):
+    return [
+        name for _, name, is_pkg in walk_packages([path]) if is_pkg
+    ]
 
 
-with open('README.rst') as readme_file:
-    readme = readme_file.read()
+def read_file(filename):
+    with open(filename) as fp:
+        return fp.read()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
 
 requirements = [
     # TODO: put package requirements here
-]
-
-test_requirements = [
-    # TODO: put package test requirements here
 ]
 
 setup(
     name='binary-repr',
     version='0.1.0',
     description="Converts integers to binary representation.",
-    long_description=readme + '\n\n' + history,
+    long_description=read_file('README.rst') + '\n\n' + read_file('HISTORY.rst'),
     author="Rolando Espinoza",
     author_email='rolando at rmax.io',
     url='https://github.com/rolando/binary-repr',
-    packages=[
-        'binary_repr',
-    ],
-    package_dir={'binary_repr':
-                 'binary_repr'},
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     include_package_data=True,
     install_requires=requirements,
     license="MIT",
@@ -50,6 +44,4 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
     ],
-    test_suite='tests',
-    tests_require=test_requirements
 )

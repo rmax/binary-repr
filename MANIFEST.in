@@ -1,11 +1,13 @@
-include AUTHORS.rst
-include CONTRIBUTING.rst
-include HISTORY.rst
+graft docs
+graft src
+graft tests
+
+include *.in
+include *.ini
+include *.rst
+include *.txt
+
 include LICENSE
-include README.rst
+include Makefile
 
-recursive-include tests *
-recursive-exclude * __pycache__
-recursive-exclude * *.py[co]
-
-recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
+global-exclude __pycache__ *.py[cod] *.so *.dylib
