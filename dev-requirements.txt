@@ -4,12 +4,19 @@
 #
 #    pip-compile --output-file dev-requirements.txt dev-requirements.in
 #
-
 bumpversion==0.5.3
+    # via -r dev-requirements.in
 coverage==4.1
+    # via -r dev-requirements.in
 flake8==2.6.0
-mccabe==0.5.0             # via flake8
-py==1.4.31                # via pytest
-pycodestyle==2.0.0        # via flake8
-pyflakes==1.2.3           # via flake8
+    # via -r dev-requirements.in
+mccabe==0.5.0
+    # via flake8
+py==1.10.0
+    # via pytest
+pycodestyle==2.0.0
+    # via flake8
+pyflakes==1.2.3
+    # via flake8
 pytest==2.9.2
+    # via -r dev-requirements.in
